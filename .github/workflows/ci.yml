@@ -74,7 +74,10 @@ jobs:
       - name: Deploy to Railway
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-        run: echo "Deployment triggered via Railway GitHub Integration"
+          RAILWAY_PROJECT_ID: ${{ secrets.RAILWAY_PROJECT_ID }}
+        run: |
+          npm install -g @railway/cli
+          railway up --project "$RAILWAY_PROJECT_ID" --environment production --service agent --detach
 
       - name: Smoke test
         run: |
