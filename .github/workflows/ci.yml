@@ -76,7 +76,6 @@ jobs:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
         run: |
           npm install -g @railway/cli
-          railway login --token "$RAILWAY_TOKEN"
           railway up --service agent
 
       - name: Smoke test
