@@ -6,5 +6,5 @@
 |---|---|---|
 | `dashboard.png` | Railway dashboard — service `agent` | ✅ |
 | `health.png` | `GET /health` → 200 OK | ✅ |
-| `ready.png` | `GET /ready` → 200 OK + redis:true | TODO (không bắt buộc) |
-| `ask_401.png` | `POST /ask` không key → 401 | TODO (không bắt buộc) |
+| `ready.png` | `GET /ready` → 200 OK + redis:true | ✅ |
+| `ask_401.png` | `POST /ask` không key → 401 | ✅ |
