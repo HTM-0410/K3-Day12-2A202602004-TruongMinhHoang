@@ -72,12 +72,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Deploy to Railway
-        env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-          RAILWAY_PROJECT_ID: ${{ secrets.RAILWAY_PROJECT_ID }}
-        run: |
-          npm install -g @railway/cli
-          railway up --project "$RAILWAY_PROJECT_ID" --environment production --service agent --detach
+        run: echo "Deployment triggered via Railway GitHub Integration"
 
       - name: Smoke test
         run: |
