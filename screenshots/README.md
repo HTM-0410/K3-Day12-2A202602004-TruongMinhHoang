@@ -1,1 +1,10 @@
-# Đặt ảnh chụp màn hình bản deploy vào thư mục này
+# Screenshots
+
+Ảnh chụp màn hình bản deploy — dùng để chấm điểm CP5.
+
+| File | Nội dung | Status |
+|---|---|---|
+| `dashboard.png` | Railway dashboard — service `agent` | ✅ |
+| `health.png` | `GET /health` → 200 OK | ✅ |
+| `ready.png` | `GET /ready` → 200 OK + redis:true | TODO (không bắt buộc) |
+| `ask_401.png` | `POST /ask` không key → 401 | TODO (không bắt buộc) |

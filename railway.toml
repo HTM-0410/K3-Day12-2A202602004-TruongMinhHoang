@@ -10,8 +10,9 @@ builder = "dockerfile"
 dockerfilePath = "Dockerfile"
 
 [deploy]
-startCommand = "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+# Không set startCommand — để Dockerfile CMD dùng ${PORT:-8000} (an toàn hơn)
+# vì Railway serve-via-up không pass shell expansion cho $PORT trong exec form.
 healthcheckPath = "/health"
-healthcheckTimeout = 30
+healthcheckTimeout = 120
 restartPolicyType = "on_failure"
 restartPolicyMaxRetries = 3
