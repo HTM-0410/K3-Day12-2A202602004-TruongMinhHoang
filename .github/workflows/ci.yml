@@ -77,6 +77,7 @@ jobs:
           RAILWAY_PROJECT_ID: ${{ secrets.RAILWAY_PROJECT_ID }}
         run: |
           npm install -g @railway/cli
+          railway link "$RAILWAY_PROJECT_ID"
           railway up --service agent
 
       - name: Smoke test
